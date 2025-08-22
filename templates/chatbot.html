@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chatbot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        .chatbox { width: 80%; margin: auto; background: #1E1E1E; padding: 20px; border-radius: 10px; }
+        .user { text-align: right; color: #4DB6FF; margin: 10px; }
+        .bot { text-align: left; color: #FFFFFF; margin: 10px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="animated-text">AI Chat Assistant</h1>
+        <form method="POST">
+            <input type="text" name="question" placeholder="Ask a question..." required>
+            <button type="submit" class="button">Send</button>
+        </form>
+        <div class="chatbox">
+            {% if response %}
+            <div class="bot"><strong>AI:</strong> {{ response }}</div>
+            {% endif %}
+        </div>
+        <p><a href="/dashboard" class="button">Back to Dashboard</a></p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login - Personal Finance Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1 class="animated-text">Welcome to Your Personal Finance Assistant</h1>
+        <img src="https://cdn-icons-png.flaticon.com/512/2331/2331970.png" class="hero-img">
+        <form action="/login" method="POST">
+            <input type="email" name="email" placeholder="Enter Email" required><br>
+            <input type="password" name="password" placeholder="Enter Password" required><br>
+            <button type="submit" class="button">Login</button>
+        </form>
+        <p>Don't have an account? <a href="/signup">Sign up</a></p>
+    </div>
+    <footer>
+        <p><a href="#">About Us</a> | <a href="#">Contact Us</a></p>
+        <p>&copy; 2025 Personal Finance Assistant</p>
+    </footer>
+</body>
+</html>
